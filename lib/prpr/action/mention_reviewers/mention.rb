@@ -73,7 +73,7 @@ module Prpr
         end
 
         def repository_name
-          event.repository.full_name
+          env[:mention_comment_members_repository] || event.repository.full_name
         end
 
         def to_dm?
